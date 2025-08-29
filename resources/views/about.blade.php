@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
     <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
@@ -20,12 +21,12 @@
         x-transition:enter-end="opacity-100 translate-y-0">
 
         <div class="flex">
-            <section class="gap-5 px-35 py-10 items-center">
+            <section class="gap-10 px-20 py-30 ">
                 <div>
                     <span class="bg-lime-100 text-Hijau px-5 py-2 rounded-full font-poppins font-semibold">
                         About
                     </span>
-                    <h1 class="text-6xl font-bold mt-7 mr-50 font-poppins text-Ireng">
+                    <h1 class="text-6xl font-bold mt-7 mr-70 font-poppins text-Ireng">
                         Save The Earth <span class="text-Hijau">Recycling Trash </span>
                     </h1>
                     <p class="text-gray-600 mt-10 pr-40 font-p font-medium">
@@ -35,11 +36,12 @@
                     <div class="flex justify-center">
                     </div>
             </section>
-            <img src="{{ asset('img/bumiabout.png') }}" alt="planet" class="w-115 h-115 pr-30" />
+            <img src="{{ asset('img/bumiabout.png') }}" alt="planet" class="max-w-xs md:max-w-md lg:max-w-lg h-auto pr-30" />
         </div>
+</section>
 
         {{-- Trash Indo --}}
-        <section class="px-10 md:px-34 mt-10 py-20 grid md:grid-cols-2 gap-10 items-center">
+        <section class="px-10 md:px-20 mt-10 py-20 grid md:grid-cols-2 gap-10 items-center">
             <img src="{{ asset('img/rectangle 2.png') }}" alt="Recycle" class="" />
             <div>
                 <h2 class="text-4xl font-bold font-poppins text-Ireng">
@@ -62,7 +64,7 @@
         </section>
 
         {{-- Education Works --}}
-        <section class="px-10 md:px-37 py-30">
+        <section class="px-10 md:px-24 py-30">
             <h3 class="text-4xl font-poppins font-bold text-center mb-20">Education <span
                     class="text-Hijau">Workflow</span></h3>
             <div class="grid md:grid-cols-2 gap-5 items-center">
@@ -72,17 +74,17 @@
                         of waste dumped into the environment by reducing the amount of waste produced</p>
                 </div>
                 <div class="space-y-10">
-                    <div class="p-8 rounded-lg shadow-sm">
+                    <div class="p-8 rounded-lg shadow-sm bg-gray-50">
                         <h5 class="font-bold font-poppins text-Ireng">1. Reduce</h5>
                         <p class="text-gray-600 text-sm font-p font-medium">Avoid using products that produce a lot of waste, especially
                             single-use products.</p>
                     </div>
-                    <div class="p-8 rounded-lg shadow-sm">
+                    <div class="p-8 rounded-lg shadow-sm bg-gray-50">
                         <h5 class="font-bold font-poppins text-Ireng">2. Reuse</h5>
                         <p class="text-gray-600 text-sm font-p font-medium">Reuse items that can still be used for the same function or
                             other functions.</p>
                     </div>
-                    <div class="p-8 rounded-lg shadow-sm">
+                    <div class="p-8 rounded-lg shadow-sm bg-gray-50">
                         <h5 class="font-bold font-poppins text-Ireng">3. Recycle</h5>
                         <p class="text-gray-600 text-sm font-p font-medium">Recycle waste into new goods or products that are useful and
                             have economic value.</p>
@@ -92,19 +94,19 @@
         </section>
 
         {{-- Contact --}}
-        <section class="px-10 md:px-20 py-14 grid md:grid-cols-2 gap-10 items-center">
+        <section class="px-10 md:px-3 ml-20 py-14 grid md:grid-cols-2 gap-10 items-center">
             <div>
-                <h3 class="text-3xl font-bold">Contact <span class="text-Hijau">Us</span></h3>
-                <p class="mt-4"><span class="text-Hijau font-bold">Re-Cyce</span> is a digital platform designed to
-                    educate, inspire, and facilitate the public in managing and recycling waste.</p>
-                <button class="mt-5 bg-Hijau hover:bg-Hijau text-white px-6 py-2 rounded-lg shadow">See More</button>
+                <h3 class="text-3xl font-poppins font-bold">Contact <span class="text-Hijau">Us</span></h3>
+                <p class="mt-4 ">Re-Cyce is a digital platform designed to
+                    educate, inspire, and facilitate the public in managing and recycling waste</p>
+                <button class="mt-5 bg-Hijau text-white font-poppins px-6 py-2 rounded-lg shadow  hover:bg-white hover:text-Hijau hover:border-2 border-Hijau hover:scale-105 transition duration-300">See More</button>
             </div>
-            <div class="p-6 rounded-lg shadow-sm">
-                <div class="flex items-center space-x-3">
-                    <span class="text-Hijau text-2xl">📧</span>
+            <div class="p-6 rounded-lg mr-21 shadow-sm bg-gray-50">
+                <div class=" items-center">
+                    <i class='bx bx-envelope text-2xl text-Hijau' ></i>
                     <h4 class="font-bold">Email</h4>
                 </div>
-                <p class="text-gray-600 mt-2 text-sm">Get complete information by sending an email to:</p>
+                <p class="text-gray-600 mt-2 text-sm font-p font-medium">Get complete information by sending an email to:</p>
                 <p class="font-bold mt-2">JagoanDigit@gmail.com</p>
             </div>
         </section>

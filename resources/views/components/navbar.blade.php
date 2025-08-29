@@ -1,44 +1,81 @@
-<div>
+<div 
+  x-data="{ scrolled: false, open: false }" 
+  x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 20 })"
+  class="sticky top-0 z-50 transition-all duration-500"
+  :class="scrolled ? 'backdrop-blur-lg bg-white/70 shadow-md' : 'bg-white'"
+>
+  {{-- Nav --}}
+  <nav class="border-Ireng">
+    <div class="flex flex-wrap items-center justify-between mx-auto py-4 px-4 sm:px-6 md:px-10 lg:px-20">
 
-    {{-- Nav --}}
-    <nav class="bg-white border-Ireng dark:bg-white">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="{{ asset('img/Group 4 (1).png') }}" class="h-9" alt="Flowbite Logo" />
-        <span class=" text-2xl font-bold whitespace-nowrap text-Hijau font-p">Re-Cyce</span>
+      {{-- Logo --}}
+      <a href="/" class="flex items-center space-x-3">
+        <img src="{{ asset('img/Group 4 (1).png') }}" class="h-9" alt="Logo" />
+        <span class="text-2xl font-bold whitespace-nowrap text-Hijau font-p">Re-Cyce</span>
       </a>
-      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <button type="button"
-          class="text-white font-poppins bg-Hijau hover:bg-Hijau rounded-lg text-sm px-4 py-2 text-center font-semibold dark:hover:bg-Ireng md:dark:hover:text-white ">Get
-          started</button>
-        <button type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-Ireng focus:outline-none focus:ring-2 focus:ring-Ireng"
+
+      {{-- Button Area --}}
+      <div class="flex md:order-2 space-x-3 md:space-x-4">
+        <!-- Login -->
+        <a href="{{ url('/admin') }}"
+          class="text-Hijau text-lg md:text-xl font-poppins bg-White border-2 border-Hijau rounded-lg px-3 md:px-4 py-2 font-semibold hover:bg-Hijau hover:text-white hover:scale-105 transition duration-300">
+          Login
+        </a>
+
+        <!-- Mobile menu toggle -->
+        <button @click="open = !open" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-600 rounded-lg md:hidden hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-Ireng"
           aria-controls="navbar-cta" aria-expanded="false">
-          <span class="sr-only font-title">Open Menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15" />
+          <span class="sr-only">Open Menu</span>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </div>
-      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+
+      {{-- Menu --}}
+      <div 
+        class="w-full md:flex md:w-auto md:order-1" 
+        :class="open ? 'block' : 'hidden'"
+      >
         <ul
-          class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+          class="flex flex-col md:flex-row md:space-x-8 font-medium p-4 md:p-0 mt-4 md:mt-0 border border-gray-100 rounded-lg bg-gray-50 md:bg-transparent md:border-0"
+        >
+          {{-- Home --}}
           <li>
-            <a href="welcome"
-              class="block py-2 px-3 md:p-0 text-Hijau font-semibold rounded-sm md:bg-transparentmd:text-green-400 md:dark:text-Hijau font-title">Home</a>
+            <a href="{{ url('welcome') }}"
+              class="block py-2 px-3 md:p-0 font-title transition 
+              {{ Request::is('welcome') ? 'text-Hijau font-bold' : 'text-Ireng hover:text-Hijau' }}">
+              Home
+            </a>
           </li>
+
+          {{-- About --}}
           <li>
             <a href="{{ url('/about') }}"
-              class="block py-2 px-3 md:p-0 text-Ireng rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-Hijau md:dark:hover:text-Hijau font-medium font-title">About</a>
+              class="block py-2 px-3 md:p-0 font-title transition
+              {{ Request::is('about') ? 'text-Hijau font-bold' : 'text-Ireng hover:text-Hijau' }}">
+              About
+            </a>
           </li>
+
+          {{-- Services --}}
           <li>
-            <a href="#"
-              class="block py-2 px-3 md:p-0 text-Ireng rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-Hijau md:dark:hover:text-Hijau dark:text-Ireng font-medium font-title">Services</a>
+            <a href="{{ url('/services') }}"
+              class="block py-2 px-3 md:p-0 font-title transition
+              {{ Request::is('services') ? 'text-Hijau font-bold' : 'text-Ireng hover:text-Hijau' }}">
+              Services
+            </a>
           </li>
+
+          {{-- Contact --}}
           <li>
-            <a href="#"
-              class="block py-2 px-3 md:p-0 text-Ireng rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-Hijau md:dark:hover:text-Hijau dark:text-Ireng font-medium font-title">Contact</a>
+            <a href="{{ url('/contact') }}"
+              class="block py-2 px-3 md:p-0 font-title transition
+              {{ Request::is('contact') ? 'text-Hijau font-bold' : 'text-Ireng hover:text-Hijau' }}">
+              Contact
+            </a>
           </li>
         </ul>
       </div>
