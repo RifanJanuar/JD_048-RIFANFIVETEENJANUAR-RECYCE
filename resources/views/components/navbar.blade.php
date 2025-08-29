@@ -9,7 +9,7 @@
       </a>
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
         <button type="button"
-          class="text-white font-title bg-Hijau hover:bg-Hijau rounded-lg text-sm px-4 py-2 text-center font-semibold dark:hover:bg-Ireng md:dark:hover:text-white ">Get
+          class="text-white font-poppins bg-Hijau hover:bg-Hijau rounded-lg text-sm px-4 py-2 text-center font-semibold dark:hover:bg-Ireng md:dark:hover:text-white ">Get
           started</button>
         <button type="button"
           class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-Ireng focus:outline-none focus:ring-2 focus:ring-Ireng"
@@ -25,11 +25,11 @@
         <ul
           class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
           <li>
-            <a href="#"
+            <a href="welcome"
               class="block py-2 px-3 md:p-0 text-Hijau font-semibold rounded-sm md:bg-transparentmd:text-green-400 md:dark:text-Hijau font-title">Home</a>
           </li>
           <li>
-            <a href="#"
+            <a href="{{ url('/about') }}"
               class="block py-2 px-3 md:p-0 text-Ireng rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-Hijau md:dark:hover:text-Hijau font-medium font-title">About</a>
           </li>
           <li>
