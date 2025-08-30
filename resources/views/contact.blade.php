@@ -125,7 +125,7 @@
   </section>
 
   <!-- Contact Form -->
-  <section class="grid md:grid-cols-2 gap-10 ml-8 px-8 md:px-16 mt-20">
+  <section class="grid md:grid-cols-2 gap-10b  ml-8 px-8 md:px-16 mt-20">
     <!-- Form -->
     <form class="space-y-4 w-full">
       <div class="grid grid-cols-2 gap-4">

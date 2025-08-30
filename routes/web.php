@@ -17,3 +17,12 @@ Route::get('/welcome', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/service', function () {
+    return view('service');
+});
+
+use App\Http\Controllers\ProductController;
+
+Route::get('/product', [ProductController::class, 'index'])->name('products.index');
+Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
