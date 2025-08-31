@@ -1,35 +1,49 @@
-    <footer class="bg-gray-900 text-gray-300 mt-20 px-8 md:px-16 py-10">
-    <div class="grid md:grid-cols-4 gap-10">
-      <div>
-        <h2 class="text-Hijau font-bold text-lg">RE-Cyce</h2>
-        <p class="text-sm mt-4">Kerjabg is helping people giving the best experience at home for real</p>
-        <p class="text-xs mt-2">All Rights Reserved Team Joganadigital 2025</p>
-      </div>
-      <div>
-        <h3 class="font-semibold mb-3">COMPANY</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/about" class="hover:text-Hijau">About Us</a></li>
-          <li><a href="/services" class="hover:text-Hijau">Service</a></li>
-          <li><a href="/contact" class="hover:text-Hijau">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold mb-3">HELP</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:text-Hijau">Customer Support</a></li>
-          <li><a href="#" class="hover:text-Hijau">Help Center</a></li>
-          <li><a href="#" class="hover:text-Hijau">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold mb-3">RESOURCES</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:text-Hijau">Pinterest</a></li>
-          <li><a href="#" class="hover:text-Hijau">Web</a></li>
-          <li><a href="#" class="hover:text-Hijau">Our Profiles</a></li>
-          <li><a href="#" class="hover:text-Hijau">Radar Banyuwangi</a></li>
-          <li><a href="#" class="hover:text-Hijau">Jawa Pos</a></li>
-        </ul>
-      </div>
+<footer class="bg-gray-900 text-gray-300 mt-20 px-6 md:px-16 py-12">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+    
+    <!-- Brand -->
+    <div>
+      <h2 class="text-Hijau font-bold text-xl">RE-Cyce</h2>
+      <p class="text-sm mt-4 leading-relaxed">
+        Re-Cyce helps people recycle better and create a cleaner environment for everyone.
+      </p>
     </div>
-  </footer>
+
+    <!-- Company -->
+    <div>
+      <h3 class="font-semibold mb-4 text-white">COMPANY</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/about" class="hover:text-Hijau transition">About Us</a></li>
+        <li><a href="/services" class="hover:text-Hijau transition">Services</a></li>
+        <li><a href="/contact" class="hover:text-Hijau transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Help -->
+    <div>
+      <h3 class="font-semibold mb-4 text-white">HELP</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-Hijau transition">Customer Support</a></li>
+        <li><a href="#" class="hover:text-Hijau transition">Help Center</a></li>
+        <li><a href="#" class="hover:text-Hijau transition">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div>
+      <h3 class="font-semibold mb-4 text-white">RESOURCES</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-Hijau transition">Pinterest</a></li>
+        <li><a href="#" class="hover:text-Hijau transition">Website</a></li>
+        <li><a href="#" class="hover:text-Hijau transition">Our Profiles</a></li>
+        <li><a href="#" class="hover:text-Hijau transition">Radar Banyuwangi</a></li>
+        <li><a href="#" class="hover:text-Hijau transition">Jawa Pos</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="border-t border-gray-700 mt-10 pt-6 text-center text-xs text-gray-400">
+    © 2025 Re-Cyce. All Rights Reserved. Built with by <span class="text-Hijau">Joganadigital</span>.
+  </div>
+</footer>
