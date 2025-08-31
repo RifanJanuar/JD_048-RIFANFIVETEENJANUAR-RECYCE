@@ -156,14 +156,14 @@
       <h3 class="text-2xl md:text-3xl font-poppins text-Ireng font-bold">
         Contact <span class="text-Hijau">Us</span>
       </h3>
-      <p class="mt-4 text-sm md:text-base">
+      <p class="mt-4 mb-5 text-sm md:text-base">
         Re-Cyce is a digital platform designed to educate, inspire, and facilitate
         the public in managing and recycling waste.
       </p>
-      <button
-        class="mt-5 bg-Hijau text-white font-poppins px-6 py-2 rounded-lg shadow hover:bg-white hover:text-Hijau hover:border-2 border-Hijau hover:scale-105 transition duration-300">
+      <a href="{{ url('/contact') }}"
+        class="bg-Hijau text-white font-poppins px-6 py-2 rounded-lg shadow hover:bg-white hover:text-Hijau hover:border-2 border-Hijau hover:scale-105 transition duration-300">
         See More
-      </button>
+      </a>
     </div>
     <div class="p-6 rounded-lg shadow-sm bg-gray-50 text-center md:text-left">
       <div class="flex items-center justify-center md:justify-start gap-2">

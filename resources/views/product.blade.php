@@ -27,18 +27,19 @@
 
     <!-- Container -->
     <div class="max-w-7xl mx-auto px-6 py-8 animate-slideUp"
-         x-data="{ filterOpen: false, favorites: {}, activeTab: 'marketplace' }">
+         x-data="{ filterOpen: false, favorites: {}, activeTab: 'marketplace', search: '' }">
 
         <!-- Search -->
         <div class="flex items-center gap-3 bg-gray-100 rounded-xl px-4 py-3 relative">
             <i class="bx bx-search text-gray-400 text-xl"></i>
             <input type="text"
                    placeholder="Search Product"
+                   x-model="search"
                    class="bg-transparent flex-1 outline-none text-sm font-space md:text-base">
         </div>
 
         <!-- Marketplace -->
-        <div class="py-10" x-data="{ favorites: {} }" x-show="activeTab === 'marketplace'">
+        <div class="py-10" x-show="activeTab === 'marketplace'">
             <div class="flex justify-between items-center mb-6">
                 <h2 class="text-lg md:text-xl font-bold">Recycle Product</h2>
             </div>
@@ -47,7 +48,9 @@
                 @forelse($products as $product)
                     <div class="border border-Ireng rounded-xl p-4 shadow-sm hover:shadow-md
                                 transition transform hover:-translate-y-2 hover:scale-105
-                                duration-300 relative bg-white flex flex-col">
+                                duration-300 relative bg-white flex flex-col"
+                         x-show="'{{ strtolower($product->nama) }}'.includes(search.toLowerCase()) || 
+                                 '{{ strtolower($product->harga) }}'.includes(search.toLowerCase())">
 
                         @php
                             $img = $product->gambar
